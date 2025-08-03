@@ -168,9 +168,59 @@ The bar chart then visualizes the results, showing us the percentage distributio
 ![image_15](/screenshots/image_15.png)
 
 By comparing the average yearly salaries of key senior roles, we can clearly see that **Senior Data Scientist** is the highest-paying role among the three, followed by Senior Data Engineer and Senior Data Analyst. It’s a very straightforward way to visualize and understand the salary hierarchy 
-# Power Query
 
-  START HERE!!!! pivot table is done
+# Power Query - Part 1 
+
+## Section 1
+We started by connecting to a raw data file called **'01_Jan_data_jobs.xlsx'**  and bringing it into our Power Query editor. The first thing we did was prepare the data by making sure the column headers were correct and that each column was using the right data type, such as text for job titles and currency for salary.
+
+
+![image_16](/screenshots/image_16.png)
+
+Next, we focused on cleaning and transforming the data. We performed a text cleanup to remove the phrase **'via'** from the job_via column. Then, we created two new, very useful columns:
+
+**Job_posted_day**, which extracts just the day number from the full date a job was posted.
+
+**Salary_adjusted**, which takes the average hourly salary and converts it to an approximate yearly salary for easy comparison.
+
+Finally, we organized our finished data. We added a unique **job_id** to each record and reordered all the columns to present a clean, logical table for our analysis."
+
+## Section 2
+
+We started by isolating and organizing the key information we needed to analyze job skills. We used Power Query's **Table.SelectColumns** function to create a new sheet focused only on job skills, titles, and IDs.
+
+
+![image_17](/screenshots/image_17.png)
+
+The raw skills data was messy, likely stored as a text list with brackets and quotes. We used **Table.ReplaceValue** multiple times to clean up this text by removing characters like [, ], and '.
+
+The most powerful part of this process was restructuring the data. First, we used **Table.SplitColumn** to break the comma-separated list of skills into up to 21 new columns. This turned one row of skills into a single-skill-per-column format. The critical next step was to **unpivot** this table. This converted our wide table into a long one, where each individual skill now has its own dedicated row. This is a crucial step that makes it possible to accurately count and analyze the frequency of each skill.
+
+
+Finally, we performed a thorough cleanup to ensure data quality. We used **Text.Trim** to remove any extra spaces, **Text.Proper** to standardize capitalization, and a conditional column to specifically correct the formatting of important acronyms like 'SQL', 'AWS', and 'Power BI'. This ensures our final skills data is perfectly clean and consistent for analysis."
+
+## Section  3
+
+First, we used the **Table.Group** function to group all of our job skills data together. This allowed us to efficiently count how many times each unique skill appeared in our dataset. 
+
+![image_18](/screenshots/image_18.png)
+
+We then used the **Table.Sort** function to arrange that list in descending order, putting the most frequently mentioned skills at the top. Finally, with **Table.FirstN**, we selected just the top 10 skills from the sorted list, giving us a clear and concise view of the most in-demand skills.
+
+## Section 4 
+
+First, we performed a join by using **Table.NestedJoin** to merge two tables. We brought the cleaned and restructured job skills data back into our main table using the **job_id** as the common **identifier**. The join type, **JoinKind.FullOuter**, ensured we kept all the data from both tables.
+
+![image_19](/screenshots/image_19.png)
+
+Afterward, we expanded that merged data to make the **Job_skills** column visible in our main table. Finally, we used a conditional column to create a new, consolidated **Salary_combined column**. This column intelligently combines our salary data by first using the official yearly salary and then automatically filling in any missing values with our previously calculated Salary_adjusted figure.
+
+This entire process created a single, complete, and robust dataset ready for final analysis.
+
+
+
+# Power Query - Part 2
+
 ## Author  
 Created by **Arsen Pankiv**  
 - [LinkedIn](https://www.linkedin.com/in/arsen-pankiv-6082b4349/)  
