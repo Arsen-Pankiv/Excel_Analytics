@@ -183,7 +183,18 @@ Next, we focused on cleaning and transforming the data. We performed a text clea
 
 **Salary_adjusted**, which takes the average hourly salary and converts it to an approximate yearly salary for easy comparison.
 
-Finally, we organized our finished data. We added a unique **job_id** to each record and reordered all the columns to present a clean, logical table for our analysis."
+Finally, we organized our finished data. We added a unique **job_id** to each record and reordered all the columns to present a clean, logical table for our analysis.
+
+### Accompanying chart 
+
+The graph below displays a visual comparison of **two different salary metrics** across various job titles. **The bar chart** and the accompanying **PivotTable** show the **"Average of salary_adjusted"** and the **"Average of salary_year_avg"** for several roles, such as Business Analyst, Data Scientist, and Data Engineer. 
+
+![image_23](/screenshots/image_23.png)
+
+This chart helps to visually compare the calculated salary figures with the original reported average salaries for each job title. The data shows that for some roles, like **Cloud Engineer**, the adjusted salary is significantly lower than the reported salary, while for others, such as **Senior Data Scientist**, the adjusted and reported salaries are very close.
+
+
+
 
 ## Section 2
 
@@ -198,6 +209,15 @@ The most powerful part of this process was restructuring the data. First, we use
 
 
 Finally, we performed a thorough cleanup to ensure data quality. We used **Text.Trim** to remove any extra spaces, **Text.Proper** to standardize capitalization, and a conditional column to specifically correct the formatting of important acronyms like 'SQL', 'AWS', and 'Power BI'. This ensures our final skills data is perfectly clean and consistent for analysis."
+
+ ### Accompanying chart 
+
+
+The chart below  and the accompanying **PivotTable** answer the question, "What are the top 10 skills for Data Nerds?". The bar chart visually ranks the most frequent skills based on their **Skill_Count**.
+
+ ![image_24](/screenshots/image_24.png)
+
+ The **interactive slicer** on the left allows you to dynamically filter the results by a specific **job title**. In this view, with **"Cloud Engineer"** selected, the chart shows the top skills specifically relevant for that role, with skills like **Spark** and **Python** appearing most frequently. This visualization is a direct result of the data cleaning that made it possible to accurately count and rank job skills.
 
 ## Section  3
 
@@ -217,9 +237,34 @@ Afterward, we expanded that merged data to make the **Job_skills** column visibl
 
 This entire process created a single, complete, and robust dataset ready for final analysis.
 
+ ### Accompanying chart 
 
+ This chart and the accompanying **PivotTable** provide a clear view of the relationship between **skill demand** and **salary**. 
+
+ ![image_25](/screenshots/image_25.png)
+
+**The bars** on the chart show the total job count for each skill, indicating how in-demand it is. **The line** shows the average salary associated with each skill, giving you a sense of its value in the market. For example, the chart shows that **SQL** and **Pytho** have both a high job count and a high average salary per skill. This visualization is interactive, allowing you to use the **slicer** on the left to filter for specific job titles and see the demand and value of skills for a particular role.
 
 # Power Query - Part 2
+
+## Section 1
+
+ For each month, we created a separate query that connected to a single master file, **data_jobs_salary_monthly.xlsx.** The Source step for each query navigated to a specific sheet within that workbook to load the monthly data.
+
+![image_20](/screenshots/image_20.png)
+
+A critical step for each monthly table was to use **Table.TransformColumnTypes** to enforce data integrity, where you explicitly defined the data type for every column, ensuring that numerical data like **salary_year_avg** was treated as a number and text like **job_title_short** was correctly recognized as text. After preparing each month's data, we created a final query named **data_jobs_all**. 
+
+![image_21](/screenshots/image_21.png)
+
+This query's core function was **Table.Combine**, which appended all the individual monthly tables into one large, comprehensive table, thereby creating a single, structured dataset ready for full-year analysis.
+
+
+##  Section 2
+
+Using the clean, master table we created, we were able to build a set of dynamic and interactive reports. We used **PivotTables** and charts to clearly visualize job trends throughout the year, showing us exactly how many jobs were posted each month. 
+
+<img src="screenshots/image_22.png" alt="image_9" width="400" height="500" />
 
 ## Author  
 Created by **Arsen Pankiv**  
