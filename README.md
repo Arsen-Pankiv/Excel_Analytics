@@ -63,7 +63,7 @@ The conditional formatting on the "Data Science Job Count Tracker" table serves 
 
 **Provide Quick Insights:** Understand monthly fluctuations and job market health at a glance, complemented by sparklines.
 
-**Complemented by sparklines on the right which show a visual trend over the year for each role.**
+Complemented by **sparklines** on the right which show a visual trend over the year for each role.
 # 3 Tables (Slicers)
 ![image_1](/screenshots/image_3.png)
 
@@ -74,7 +74,7 @@ Slicers empower users to interactively refine the displayed salary data, making 
 
 **Country:** This slicer enables users to narrow down the salary information by geographical location.
 
-**Job type:** This slicer provides the ability to filter by employment type, with "Full-time" currently selected. Other options like "Part-time," "Temp work," and "Contractor" are likely available. This allows users to compare salaries based on different employment arrangements.
+**Job type:** This slicer provides the ability to filter by employment type, with "Full-time" currently selected and options like "Part-time," "Temp work," and "Contractor" are also available. This allows users to compare salaries based on different employment arrangements.
 
 In addition to the slicers, the dashboard also features a histogram titled **"How much do Data Science jobs make?"**. This visualization displays the distribution of salaries, showing the frequency  within different salary ranges. It helps users understand where most salaries fall and identify common salary brackets.
 
@@ -93,11 +93,11 @@ In addition to the slicers, the dashboard also features a histogram titled **"Ho
 
 So, we've talked about what-if analysis, where we change inputs to see what happens. Now, let's look at something more powerful: **Solver**. Think of it as a reverse what-if tool.
 
-Instead of asking, 'What will happen if...?', Solver allows us to ask, 'What do we need to do to achieve a specific goal?'.
+Instead of asking, 'What will happen if...?', Solver allows us to ask, **'What do we need to do to achieve a specific goal?'**.
 
 ![image_6](/screenshots/image_6.png)
 
-For example, our objective was to increase our total salary to £640,000. We set that as our goal. Solver then worked backwards, telling us exactly what combination of inputs would get us there. It figured out we would need a 20% bonus and a 3.2% raise to hit that target, which is a big jump from our original 10% bonus and 1.5% raise.
+For example, our objective was to increase our total salary to **£640,000**. We set that as our goal. Solver then worked backwards, telling us exactly what combination of inputs would get us there. It figured out we would need a 20% bonus and a 3.2% raise to hit that target, which is a big jump from our original 10% bonus and 1.5% raise.
 
 Importantly, it does all this while respecting any rules or constraints we set, ensuring the solution is realistic.
 
@@ -107,7 +107,7 @@ In short, Solver helps us move from just exploring different options to finding 
 
 ![image_8](/screenshots/image_8.png)
 
-This is a simple but powerful tool for financial planning. It allows us to compare multiple scenarios at once by changing just one variable—in this case, the Annual Raise from 0% to 4%. This lets us instantly see the impact of each scenario on our total salary, making it easy to plan and understand how sensitive our earnings are to that one change.
+This is a simple but powerful tool for financial planning. It allows us to compare multiple scenarios at once by changing just one variable—in this case, the Annual Raise from **0% to 4%**. This lets us instantly see the impact of each scenario on our total salary, making it easy to plan and understand how sensitive our earnings are to that one change.
 
 ![image_7](/screenshots/image_7.png)
 
@@ -115,7 +115,7 @@ This is a more advanced version of our what-if analysis, where we use a data tab
 
 In this view, we're not just changing the Annual Raise; we're also changing the Bonus. The rows represent different Annual Raise scenarios, while the columns represent different Bonus scenarios.
 
-This allows us to instantly see how the Total Salary is impacted by the combination of these two variables. You can quickly find the total amount for any given combination, and the color coding helps us easily spot which scenarios yield the highest total earnings.
+This allows us to instantly see how the **Total Salary is impacted by the combination of these two variables**. You can quickly find the total amount for any given combination, and the color coding helps us easily spot which scenarios yield the highest total earnings.
 
 # Pivot Tables and Charts
 
@@ -128,7 +128,7 @@ For each job, the table instantly calculates three key metrics: **the total Job 
 
 <img src="screenshots/image_9.png" alt="image_9" width="300" height="500" />
 
-We can also use the job_country filter to change the entire report with a single click, allowing us to focus on specific markets and make a direct comparison. It's a highly efficient way to turn raw data into a readable, actionable report."
+We can also use the **job_country filter** to change the entire report with a single click, allowing us to focus on specific markets and make a direct comparison. It's a highly efficient way to turn raw data into a readable, actionable report."
 
 
 ![image_11](/screenshots/image_11.png)
