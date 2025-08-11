@@ -6,22 +6,22 @@ This project demonstrates an advanced level of **Microsoft Excel** skills throug
 
 **Dataset consists of the follwing columns**:
 
-job_title_short
-job_title
-job_location
-job_via
-job_schedule_type
-job_work_from_home
-search_location
-job_posted_date
-job_no_degree_mention
-job_health_insurance
-job_country
-salary_rate
-salary_year_avg
-salary_hour_avg
-company_name
-job_skills
+job_title_short     
+job_title   
+job_location    
+job_via 
+job_schedule_type   
+job_work_from_home  
+search_location  
+job_posted_date  
+job_no_degree_mention   
+job_health_insurance    
+job_country  
+salary_rate  
+salary_year_avg  
+salary_hour_avg  
+company_name    
+job_skills  
 
 The **primary objective** is to showcase a variety of Excel features — from dashboard creation to advanced Power Query transformations — while analyzing real-world data to extract valuable insights.
 
