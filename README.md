@@ -1,9 +1,8 @@
 
 # Introduction 
 
-The following dataset was used in order to demostrate the set of skills which was applied during executing of the following tasks.
+This project demonstrates an advanced level of **Microsoft Excel** skills through the creation of interactive dashboards, insightful visualizations, and sophisticated data analysis techniques.
 
-Main objective: demonstrate the advanced level of Excel
 
 **Dataset consists of the follwing columns**:
 
@@ -23,6 +22,10 @@ salary_year_avg
 salary_hour_avg
 company_name
 job_skills
+
+The **primary objective** is to showcase a variety of Excel features — from dashboard creation to advanced Power Query transformations — while analyzing real-world data to extract valuable insights.
+
+
 
 # 1 - DashBoard 
 ![image_1](/screenshots/image_1.png)
@@ -73,18 +76,18 @@ Slicers empower users to interactively refine the displayed salary data, making 
 
 **Job type:** This slicer provides the ability to filter by employment type, with "Full-time" currently selected. Other options like "Part-time," "Temp work," and "Contractor" are likely available. This allows users to compare salaries based on different employment arrangements.
 
-**In addition to the slicers, the dashboard also features a histogram titled "How much do Data Science jobs make?". This visualization displays the distribution of salaries, showing the frequency  within different salary ranges. It helps users understand where most salaries fall and identify common salary brackets.**
+In addition to the slicers, the dashboard also features a histogram titled **"How much do Data Science jobs make?"**. This visualization displays the distribution of salaries, showing the frequency  within different salary ranges. It helps users understand where most salaries fall and identify common salary brackets.
 
 
 # 4 Add-ins:
 ## What-If Analysis (Scenario Manager)
 ![image_4](/screenshots/image_4.png)
 
-***What-if analysis*** is a powerful technique used in spreadsheets, such as the one displayed, to model and explore different financial scenarios. The dashboard is structured with clear Input Cells for key variables like Base Salary, Bonus, and Annual Raise, which can be easily adjusted to test assumptions. The Result Cells then automatically calculate the corresponding outcomes over time, driven by a formula like =(base*(1+raise)^B9)*(1+bonus), which calculates the amount for each year based on the inputs. This allows users to quickly answer questions like, "What if I received a different bonus or raise?". 
+**What-if analysis** is a powerful technique used in spreadsheets, such as the one displayed, to model and explore different financial scenarios. The dashboard is structured with clear Input Cells for key variables like Base Salary, Bonus, and Annual Raise, which can be easily adjusted to test assumptions. The Result Cells then automatically calculate the corresponding outcomes over time, driven by a formula like =(base*(1+raise)^B9)*(1+bonus), which calculates the amount for each year based on the inputs. This allows users to quickly answer questions like, "What if I received a different bonus or raise?". 
 
 ![image_5](/screenshots/image_5.png)
 
-***The Scenario Summary*** table further extends this capability by presenting the results of multiple what-if scenarios side-by-side, enabling a direct comparison of different job offers or financial plans to make informed decisions.
+**The Scenario Summary** table further extends this capability by presenting the results of multiple what-if scenarios side-by-side, enabling a direct comparison of different job offers or financial plans to make informed decisions.
 
 ## Solver
 
@@ -265,6 +268,14 @@ This query's core function was **Table.Combine**, which appended all the individ
 Using the clean, master table we created, we were able to build a set of dynamic and interactive reports. We used **PivotTables** and charts to clearly visualize job trends throughout the year, showing us exactly how many jobs were posted each month. 
 
 <img src="screenshots/image_22.png" alt="image_9" width="400" height="500" />
+
+
+## Conclusion
+
+This project demonstrates not only proficiency in Excel dashboards, PivotTables, and conditional formatting, but also strong capabilities in Power Query for data cleaning, transformation, and integration.
+
+By combining interactive tools, visual analytics, and advanced Excel add-ins, the work transforms raw job market data into a powerful decision-making resource — useful for job seekers, recruiters, and market analysts alike.
+
 
 ## Author  
 Created by **Arsen Pankiv**  
